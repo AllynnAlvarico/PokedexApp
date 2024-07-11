@@ -1,7 +1,8 @@
 a {
-  @apply flex flex-col justify-center text-center my-10;
+  @apply flex flex-col justify-center;
+  @apply font-mono font-bold text-center;
+  @apply my-5;
 }
-
 .icon {
   border-radius: 100%;
   height: 50px;
@@ -19,7 +20,7 @@ a {
 .icon img {
   height: 50%;
   width: 50%;
-  @apply mx-auto mt-5;
+  @apply mx-auto mt-10 mb-4;
 }
 
 .bug {
