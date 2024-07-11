@@ -2,3 +2,13 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+  .flex-row-even {
+    @apply flex flex-row justify-evenly;
+  }
+  .flex-col-even {
+    @apply flex flex-col justify-evenly;
+  }
+}
+
