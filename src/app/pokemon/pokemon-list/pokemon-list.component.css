@@ -3,6 +3,6 @@
   /*grid-gap: 16px;*/
   /*grid-template-columns:  repeat(auto-fit, minmax(15%, 1fr));*/
   /*display: inline-flex;*/
-  @apply flex flex-row justify-center
+  @apply flex flex-row justify-center;
 }
 

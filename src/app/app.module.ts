@@ -10,6 +10,10 @@ import { PokemonListComponent } from './pokemon/pokemon-list/pokemon-list.compon
 import { PokemonFilterNavComponent } from './pokemon/pokemon-filter-nav/pokemon-filter-nav.component';
 import {NgOptimizedImage} from "@angular/common";
 import { CardComponent } from './pokemon/pokemon-list/card/card.component';
+import {provideHttpClient, withFetch} from "@angular/common/http";
+import {FormsModule} from "@angular/forms";
+import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
+import {MatProgressBar} from "@angular/material/progress-bar";
 
 @NgModule({
   declarations: [
@@ -19,15 +23,19 @@ import { CardComponent } from './pokemon/pokemon-list/card/card.component';
     PokemonComponent,
     PokemonListComponent,
     PokemonFilterNavComponent,
-    CardComponent
+    CardComponent,
   ],
-    imports: [
-        BrowserModule,
-        AppRoutingModule,
-        NgOptimizedImage
-    ],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    NgOptimizedImage,
+    FormsModule,
+    MatProgressBar,
+  ],
   providers: [
-    provideClientHydration()
+    provideClientHydration(),
+    provideHttpClient(withFetch()),
+    provideAnimationsAsync()
   ],
   bootstrap: [AppComponent]
 })

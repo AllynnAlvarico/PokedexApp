@@ -1,3 +1,11 @@
+
+<!--  <label for="file">Downloading progress:</label>-->
+<!--  <progress class="w-96 rounded-full h-6"  id="file" [value]="progress" [max]="pokemonCount"> {{progress | number: '1.0-2'}}% </progress>-->
+<div class="w-96 rounded-full h-6 mx-auto my-10">
+  <h1>Downloading progress:</h1>
+  <mat-progress-bar  mode="determinate" [value]="getUpdateProgress()"></mat-progress-bar>
+</div>
+
 <section class="grid-container" >
   <app-card></app-card>
   <app-card></app-card>
