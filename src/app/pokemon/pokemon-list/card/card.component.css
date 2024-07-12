@@ -1,0 +1,15 @@
+.card {
+  @apply h-96 w-64 bg-yellow-600 rounded-xl my-10 mx-5;
+}
+.inner {
+  position: relative;
+  top: 12px;
+  height: 360px;
+  @apply w-56 bg-emerald-900 mx-auto rounded-xl;
+}
+.card-component {
+  @apply grid-cols-1;
+}
+.top-card-details {
+  @apply flex-row-even gap-4;
+}

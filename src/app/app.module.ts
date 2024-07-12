@@ -9,6 +9,7 @@ import { PokemonComponent } from './pokemon/pokemon.component';
 import { PokemonListComponent } from './pokemon/pokemon-list/pokemon-list.component';
 import { PokemonFilterNavComponent } from './pokemon/pokemon-filter-nav/pokemon-filter-nav.component';
 import {NgOptimizedImage} from "@angular/common";
+import { CardComponent } from './pokemon/pokemon-list/card/card.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import {NgOptimizedImage} from "@angular/common";
     NavComponent,
     PokemonComponent,
     PokemonListComponent,
-    PokemonFilterNavComponent
+    PokemonFilterNavComponent,
+    CardComponent
   ],
     imports: [
         BrowserModule,
