@@ -1,5 +1,6 @@
 import {OnChanges, ChangeDetectorRef, Component, OnInit} from '@angular/core';
 import {DataService} from "../../pokemon-data/data.service";
+import {Pokemon} from "pokenode-ts";
 
 @Component({
   selector: 'app-pokemon-list',
@@ -7,12 +8,12 @@ import {DataService} from "../../pokemon-data/data.service";
   styleUrl: './pokemon-list.component.css'
 })
 export class PokemonListComponent implements OnInit{
-  pokemons: any[] = [];
+  public pokemons: Pokemon[] = [];
   pokemonCount: number = 0;
   progress = 0;
   constructor(
     private dataService: DataService,
-    private cdr: ChangeDetectorRef
+    // private cdr: ChangeDetectorRef
   ) {
   }
   ngOnInit() {
@@ -29,8 +30,9 @@ export class PokemonListComponent implements OnInit{
         this.dataService.getMoreData(result.name)
           .subscribe((uniqResponse: any) => {
             this.pokemons.push(uniqResponse);
-            this.progress = 0;
-            this.updateProgress();
+            console.log(uniqResponse.name);
+            // this.progress = 0;
+            // this.updateProgress();
       //       console.log(this.progress);
 
             // console.log(uniqResponse);
@@ -40,7 +42,7 @@ export class PokemonListComponent implements OnInit{
   }
   updateProgress(){
     this.progress = (this.pokemons.length / this.pokemonCount) * 100;
-    this.cdr.detectChanges();
+    // this.cdr.detectChanges();
   }
   getUpdateProgress(){
     return this.progress;

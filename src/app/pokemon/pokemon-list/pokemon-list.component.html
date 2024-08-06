@@ -1,18 +1,46 @@
 
 <!--  <label for="file">Downloading progress:</label>-->
 <!--  <progress class="w-96 rounded-full h-6"  id="file" [value]="progress" [max]="pokemonCount"> {{progress | number: '1.0-2'}}% </progress>-->
-<div class="w-96 rounded-full h-6 mx-auto my-10">
-  <h1>Downloading progress:</h1>
-  <mat-progress-bar  mode="determinate" [value]="getUpdateProgress()"></mat-progress-bar>
-</div>
+<!--<div class="w-96 rounded-full h-6 mx-auto my-10">-->
+<!--  <h1>Downloading progress:</h1>-->
+<!--  <mat-progress-bar  mode="determinate" [value]="getUpdateProgress()"></mat-progress-bar>-->
+<!--</div>-->
 
-<section class="grid-container" >
-  <app-card></app-card>
-  <app-card></app-card>
-  <app-card></app-card>
-  <app-card></app-card>
-  <app-card></app-card>
-  <app-card></app-card>
+<section  class="grid-container" >
+  <div *ngFor="let pokemon of pokemons" class="card text-white">
+    <div class="inner">
+      <div class="card-component">
+        <div class="top-card-details">
+          <div class="flex-row-even gap-2 -ml-10">
+            <h1>{{pokemon.id}}</h1>
+            <h1>{{pokemon.name}}</h1>
+          </div>
+          <h1>Type</h1>
+        </div>
+        <img class="mx-auto my-4" src="https://placehold.co/200" alt="none"/>
+        <div class="flex-row-even text-sm mb-3">
+          <h3>
+            <b>Height:</b>
+            12 inches
+          </h3>
+          <h3>
+            <b>Weight:</b>
+            25 kg
+          </h3>
+        </div>
+      </div>
+      <div class="text-xs bg-white text-black text-center">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Amet tellus cras adipiscing enim.</p>
+      </div>
+    </div>
+  </div>
+
+<!--  <app-card></app-card>-->
+<!--  <app-card></app-card>-->
+<!--  <app-card></app-card>-->
+<!--  <app-card></app-card>-->
+<!--  <app-card></app-card>-->
+<!--  <app-card></app-card>-->
 
 </section>
 
